@@ -1,5 +1,5 @@
 import React from 'react'
-import { Selection, SelectionSchemeType } from '../typings/declations'
+import { Selection, SelectionSchemeType } from 'typings/declarations'
 
 const formatHour = (hour: number): string => {
   const h = hour === 0 || hour === 12 || hour === 24 ? 12 : hour % 12

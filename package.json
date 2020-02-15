@@ -12,26 +12,26 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
-    "@parcel/config-default": "^2.0.0-nightly.112",
-    "@parcel/validator-eslint": "^2.0.0-nightly.112",
     "@types/node": "^13.7.1",
     "@types/react": "^16.9.19",
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^4.4.3",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
-    "babel-cli": "^6.26.0",
+    "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-typescript": "^7.0.0",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-formatter-pretty": "^3.0.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-babel-module": "^5.1.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
     "husky": "^4.2.3",
-    "parcel": "^2.0.0-nightly.110",
     "parcel-bundler": "^1.12.4",
     "precise-commits": "^1.0.2",
     "prettier": "^1.19.1",
@@ -39,9 +39,9 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "parcel serve src/index.html --no-cache",
+    "dev": "parcel src/index.html --no-cache --no-autoinstall ",
     "build": "parcel build src/index.html",
-    "lint": "./node_modules/.bin/eslint --format=pretty '*/**/*.{js,ts,tsx}'",
+    "lint": "./node_modules/.bin/eslint --format=pretty './src/**/*.{js,ts,tsx}'",
     "clean": "rimraf .cache lib dist"
   },
   "dependencies": {
@@ -54,9 +54,7 @@
     "styled-components": "^5.0.1"
   },
   "alias": {
-    "react-dom": "@hot-loader/react-dom",
-    "lib": ".src/lib",
-    "typings": "./src/typings"
+    "react-dom": "@hot-loader/react-dom"
   },
   "husky": {
     "hooks": {

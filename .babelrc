@@ -1,4 +1,18 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
-  "plugins": ["react-hot-loader/babel", "@babel/plugin-proposal-class-properties", "babel-plugin-styled-components"]
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties",
+    "babel-plugin-styled-components",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "lib": "./src/lib",
+          "typings": "./src/typings"
+        }
+      }
+    ]
+  ]
 }

@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'import', 'prettier'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'import', 'prettier', 'module-resolver'],
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
@@ -40,10 +40,20 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 0,
     // Disagree
     'import/prefer-default-export': 0,
+    'module-resolver/use-alias': 2,
   },
   settings: {
     react: {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+    'import/resolver': {
+      alias: {
+        map: [
+          ['lib', './src/helper'],
+          ['typings', '.src/typings'],
+        ],
+        extensions: ['.ts', '.js', '.jsx', '.tsx', '.json'],
+      },
     },
   },
 }
