@@ -35,7 +35,8 @@
   "scripts": {
     "start": "parcel serve src/index.html --no-cache",
     "build": "parcel build src/index.html",
-    "lint": "./node_modules/.bin/eslint --format=pretty '*/**/*.{js,ts,tsx}'"
+    "lint": "./node_modules/.bin/eslint --format=pretty '*/**/*.{js,ts,tsx}'",
+    "clean": "rimraf .cache lib dist"
   },
   "dependencies": {
     "@hot-loader/react-dom": "^16.11.0",
