@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'import', 'prettier', 'module-resolver'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y', 'prettier'],
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
@@ -23,9 +23,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
     'prettier',
     'prettier/react',
     'prettier/@typescript-eslint',
@@ -40,7 +37,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 0,
     // Disagree
     'import/prefer-default-export': 0,
-    'module-resolver/use-alias': 2,
   },
   settings: {
     react: {
