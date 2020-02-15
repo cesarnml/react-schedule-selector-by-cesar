@@ -1,6 +1,6 @@
-import { isBefore } from "date-fns"
+import { isBefore } from 'date-fns'
 
-import * as dateUtils from "../date-utils"
+import * as dateUtils from '../date-utils'
 
 const linear = (selectionStart: Date, selectionEnd: Date, dateList: Array<Array<Date>>): Array<Date> => {
   let selected: Array<Date> = []

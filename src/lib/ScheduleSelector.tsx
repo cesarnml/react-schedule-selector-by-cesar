@@ -1,9 +1,9 @@
-import React from "react"
-import { Selection, SelectionSchemeType } from "../typings/declations"
+import React from 'react'
+import { Selection, SelectionSchemeType } from '../typings/declations'
 
 const formatHour = (hour: number): string => {
   const h = hour === 0 || hour === 12 || hour === 24 ? 12 : hour % 12
-  const abb = hour < 12 || hour === 24 ? "am" : "pm"
+  const abb = hour < 12 || hour === 24 ? 'am' : 'pm'
   return `${h}${abb}`
 }
 

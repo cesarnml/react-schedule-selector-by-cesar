@@ -1,8 +1,8 @@
 import { hot } from "react-hot-loader"
 import React, { useState } from "react"
-import { createGlobalStyle } from "styled-components"
-import { ScheduleSelector } from "./lib/ScheduleSelector"
-import { Selection } from "./typings/declations"
+import { createGlobalStyle } from 'styled-components'
+import { ScheduleSelector } from './lib/ScheduleSelector'
+import { Selection } from './typings/declations'
 
 const GlobalStyle = createGlobalStyle`
 body {
