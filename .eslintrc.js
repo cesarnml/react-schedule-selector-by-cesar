@@ -2,8 +2,6 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
-    node: true,
-    jest: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -28,28 +26,19 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
   ],
+  settings: {
+    react: {
+      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+  },
   rules: {
     'react-hooks/rules-of-hooks': 2,
     'react-hooks/exhaustive-deps': 1,
     // Too restrictive
     '@typescript-eslint/explicit-function-return-type': 0,
+    'import/prefer-default-export': 0,
     // Duplicate
     '@typescript-eslint/no-unused-vars': 0,
-    // Disagree
-    'import/prefer-default-export': 0,
-  },
-  settings: {
-    react: {
-      version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
-    },
-    'import/resolver': {
-      alias: {
-        map: [
-          ['lib', './src/helper'],
-          ['typings', '.src/typings'],
-        ],
-        extensions: ['.ts', '.js', '.jsx', '.tsx', '.json'],
-      },
-    },
+    'import/no-unresolved': 0,
   },
 }

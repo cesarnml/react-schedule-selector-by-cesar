@@ -23,7 +23,7 @@
     "eslint-config-airbnb-typescript": "^7.0.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-formatter-pretty": "^3.0.1",
-    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
@@ -44,16 +44,18 @@
   "dependencies": {
     "@hot-loader/react-dom": "^16.11.0",
     "date-fns": "^2.9.0",
+    "lib": "^4.0.5",
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.19",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "typings": "^2.1.1"
   },
   "alias": {
     "react-dom": "@hot-loader/react-dom",
-    "lib": "./src/lib",
-    "typings": "./src/typings"
+    "typings": "./src/typings",
+    "lib": "./src/lib"
   },
   "husky": {
     "hooks": {
