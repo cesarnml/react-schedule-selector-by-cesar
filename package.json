@@ -6,18 +6,51 @@
   "author": "Cesar Napoleon Mejia Leiva",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "^2.0.0-nightly.105",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@parcel/config-default": "^2.0.0-nightly.112",
+    "@parcel/validator-eslint": "^2.0.0-nightly.112",
+    "@types/node": "^13.7.1",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "parcel": "^2.0.0-nightly.110",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel serve src/index.html --no-cache",
+    "build": "parcel build src/index.html",
+    "lint": "./node_modules/.bin/eslint --format=pretty '*/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
+    "@hot-loader/react-dom": "^16.11.0",
+    "husky": "^4.2.3",
+    "precise-commits": "^1.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "rimraf": "^3.0.2"
+    "react-hot-loader": "^4.12.19"
+  },
+  "alias": {
+    "react-dom": "@hot-loader/react-dom"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "precise-commits"
+    }
   }
 }

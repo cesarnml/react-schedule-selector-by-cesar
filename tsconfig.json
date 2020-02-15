@@ -3,11 +3,11 @@
     "target": "es5",
     "module": "commonjs",
     "allowJs": true,
-    "jsx": "react",
     "outDir": "./dist",
     "rootDir": "./src",
-    "strict": true,
+    "jsx": "react",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true
   }
 }

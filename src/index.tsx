@@ -1,14 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import { render } from "react-dom"
-
-const App = () => {
-  const [count, setCount] = useState(0)
-  return (
-    <div>
-      <h1>Change</h1>
-      <button onClick={() => setCount(prev => prev + 1)}>{count}</button>
-    </div>
-  )
-}
+import App from "./App"
 
 render(<App />, document.getElementById("root"))
+
+if (module.hot) {
+  console.log("🔥")
+  module.hot.accept()
+}
