@@ -100,7 +100,7 @@ type Props = {
   unselectedColor?: string
   selectedColor?: string
   hoveredColor?: string
-  renderDateCell?: (date: Date, selected: boolean, refSetter: RefSetter) => ReactNode
+  renderDateCell?: (date: Date, selected: boolean, selectionDraft: Selection, refSetter: RefSetter) => ReactNode
 }
 
 type Dates = Date[][]
@@ -282,7 +282,7 @@ export const ScheduleSelector = ({
       cellToDate.set(dateCell, time)
     }
     if (renderDateCell) {
-      return renderDateCell(time, selected, refSetter)
+      return renderDateCell(time, selected, selectionDraft, refSetter)
     }
     return (
       <DateCellInternal

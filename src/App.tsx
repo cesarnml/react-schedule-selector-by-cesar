@@ -18,6 +18,11 @@ const DataCell = styled.div`
   background-color: ${({ selected }: { selected: boolean }) => (selected ? 'rgba(162, 198, 248, 1)' : '#dbedff')};
   margin: ${({ selected }) => (selected ? '0px 3px' : '3px')};
   padding: ${({ selected }) => (selected ? '3px 0px' : '0px')};
+  border-left: ${({ selected }) => (selected ? '1px solid red' : '1px solid transparent')};
+  border-right: ${({ selected }) => (selected ? '1px solid red' : '1px solid transparent')};
+  border-top: ${({ isTop }) => (isTop ? '1px solid red' : '1px solid transparent')};
+  border-bottom: ${({ isBottom }) => (isBottom ? '1px solid red' : '1px solid transparent')};
+
   line-height: 30px;
   text-align: center;
   &:hover {
@@ -64,9 +69,33 @@ const App = () => {
           startDate={startDate}
           onChange={handleChange}
           margin={0}
-          renderDateCell={(time: Date, selected: boolean, refSetter: Ref<HTMLDivElement>) => {
+          renderDateCell={(
+            time: Date,
+            selected: boolean,
+            selectionDraft: Selection,
+            refSetter: Ref<HTMLDivElement>,
+          ) => {
+            const isTop =
+              selected &&
+              !selectionDraft
+                ?.map(ele => moment(ele).toISOString())
+                ?.includes(
+                  moment(time)
+                    .add(-1, 'h')
+                    .toISOString(),
+                )
+
+            const isBottom =
+              selected &&
+              !selectionDraft
+                ?.map(ele => moment(ele).toISOString())
+                ?.includes(
+                  moment(time)
+                    .add(1, 'h')
+                    .toISOString(),
+                )
             return (
-              <DataCell ref={refSetter} selected={selected}>
+              <DataCell isTop={isTop} isBottom={isBottom} ref={refSetter} selected={selected}>
                 &nbsp;
               </DataCell>
             )
