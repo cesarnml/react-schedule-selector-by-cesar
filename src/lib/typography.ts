@@ -6,20 +6,19 @@ type SubtitleProps = {
 }
 
 export const Subtitle = styled.h2`
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 600;
   color: ${colors.black};
   text-align: ${(props: SubtitleProps) => props.align || 'center'};
 
   @media (max-width: 700px) {
-    font-size: 18px;
+    font-size: 12px;
   }
 `
 
 export const Text = styled.p`
   font-size: 14px;
   font-weight: 300;
-  line-height: ${14 * 1.37}px;
   color: ${colors.grey};
-  margin: 5px 0;
 `

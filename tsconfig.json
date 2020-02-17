@@ -15,7 +15,7 @@
       "lib": ["src/lib/*"],
       "typings": ["src/typings/*"]
     }
-    // "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-    // "exclude": ["node_modules", "dist", "cypress", "**/*.spec.ts", "**/*.spec.js"]
-  }
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["node_modules", "dist", "cypress", "**/*.spec.ts", "**/*.spec.js"]
 }

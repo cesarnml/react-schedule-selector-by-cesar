@@ -1,4 +1,12 @@
-const colors = {
+type Colors = {
+  blue: string
+  lightBlue: string
+  white: string
+  black: string
+  grey: string
+  paleBlue: string
+}
+const colors: Colors = {
   blue: 'rgba(89, 154, 242, 1)',
   lightBlue: 'rgba(162, 198, 248, 1)',
   white: 'rgba(255, 255, 255, 1)',
